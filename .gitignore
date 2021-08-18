@@ -1,0 +1,3 @@
+//ignore security vulnerabilities lol
+node_modules/node-fetch/package.json
+auth.js
