@@ -1,0 +1,23 @@
+{
+  "name": "Machinator",
+  "version": "1.0.0",
+  "description": "A Discord bot skiled in the ways of concieving plots",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asimonson1125/Machinator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asimonson1125/Machinator/issues"
+  },
+  "homepage": "https://github.com/asimonson1125/Machinator#readme",
+  "dependencies": {
+    "discord.js": "^13.1.0"
+  }
+}

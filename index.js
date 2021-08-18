@@ -1,13 +1,14 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const { Client, Intents } = require('discord.js');
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 const fetch = require('node-fetch');
-const auth = require('./auth');
+const auth = require('./auth.json');
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
 function sleep(ms) { //make wait function
+
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -70,4 +71,4 @@ client.on('message', msg => {
     } catch (error) { msg.channel.send("an error occured, make sure I have the appropriate permissions to do whatever you are asking me to do do."); console.log(error);}
 });
 
-login.auth(client);
+client.login(auth.token);
