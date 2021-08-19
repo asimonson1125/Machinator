@@ -3,6 +3,7 @@ const fetch = require('node-fetch');
 
 let response = [[],[],[]];
 exports.daily = async function (channel) {
+    response = [[],[],[]];
     const data = await fetch('http://www.pixiv.net/ranking.php?mode=daily');
     const $ = cheerio.load(await data.text());
     for(let i = 31; i < 34; i++){
