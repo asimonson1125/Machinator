@@ -1,10 +1,12 @@
 const { Client, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-const fetch = require('node-fetch');
 const auth = require('./auth.json');
+const pix = require('./pixivLink.js');
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
+    client.user.setActivity("with the fabric of reality", {type: "PLAYING"});
+    client.user.setStatus('dnd');
 });
 
 function sleep(ms) { //make wait function
@@ -43,6 +45,10 @@ client.on('message', msg => {
         }
         if (msg.content.substring(0, 11) == "^impossible") {
             msg.channel.send("​​​​");
+        }
+
+        if (msg.content.substring(0,6).toLowerCase() == "^daily"){
+            pix.daily(msg.channel);
         }
 
         if (msg.content.includes('<@!' + client.user.id + '>')) {

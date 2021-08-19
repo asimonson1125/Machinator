@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/asimonson1125/Machinator#readme",
   "dependencies": {
-    "discord.js": "^13.1.0"
+    "cheerio": "^1.0.0-rc.10",
+    "discord.js": "^13.1.0",
+    "got": "^11.8.2",
+    "pixiv-app-api": "^1.2.1",
+    "pixiv.js": "^0.18.0"
   }
 }
